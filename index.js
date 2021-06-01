@@ -82,6 +82,7 @@ function backspace() {
 function clearMem() {
     qMem = [0, 0, 0, 1];
     updateOutput();
+    dimRes();
 }
 
 function inputChange(inputId, event) {
@@ -106,14 +107,31 @@ function multiply() {
     }
     multiplyQuaternions();
     updateOutput();
+
+    lightRes();
 }
 
 function updateCursorPos() {
     let left = 5.5 + 24 * qIndex;
     document.getElementById("cursor").style.left = `${left}vw`;
+    dimRes();
 }
 
 function clickEntry(i) {
     qIndex = i;
     updateCursorPos();
+}
+
+function lightRes() {
+    let resDivs = document.getElementsByClassName('qres');
+    for (let i = 0; i < resDivs.length; i++) {
+        resDivs[i].style.opacity = 1;
+    }
+}
+
+function dimRes() {
+    let resDivs = document.getElementsByClassName('qres');
+    for (let i = 0; i < resDivs.length; i++) {
+        resDivs[i].style.opacity = 0.5;
+    }
 }
