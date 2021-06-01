@@ -43,7 +43,7 @@ input[type=number] {
     width: 3vw;
     height: 3vw;
     position: absolute;
-    top: calc(40vh - 3vw);
+    top: calc(40% - 3vw);
     left: 5.5vw;
     background-color: white;
 }
