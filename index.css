@@ -136,6 +136,8 @@ input[type=number] {
     color: white;
     background-color: black;
     font-size: 4vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
     width: calc(24% - 2px);
     height: calc(100% - 2px);
     border: 0px;

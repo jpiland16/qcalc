@@ -6,18 +6,19 @@
         </title>
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="index.css" />
-        <link rel="manifest" href="/manifest.json">
+        <link rel="manifest" href="https://raw.githubusercontent.com/jpiland16/qcalc/master/manifest.json">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="index.js"></script>
     </head>
 
     <body>
 
         <div id="res">
             <div class="qdesc">mem</div>
-            <div class="qres" id="qresX">0</div>
-            <div class="qres" id="qresY">0</div>
-            <div class="qres" id="qresZ">0</div>
-            <div class="qres" id="qresW">1</div>
+            <div class="qres" id="qresX">0.00</div>
+            <div class="qres" id="qresY">0.00</div>
+            <div class="qres" id="qresZ">0.00</div>
+            <div class="qres" id="qresW">1.00</div>
         </div>
                 
         <div id="label">
@@ -30,45 +31,45 @@
 
         <div id="entry">
             <div class="qdesc">times</div>
-            <input type="number" class="qent" id="qentX" />
-            <input type="number" class="qent" id="qentY" />
-            <input type="number" class="qent" id="qentZ" />
-            <input type="number" class="qent" id="qentW" />
+            <input type="number" class="qent" id="qentX" onkeyup="inputChange(0, event.target.value)"/>
+            <input type="number" class="qent" id="qentY" onkeyup="inputChange(1, event.target.value)"/>
+            <input type="number" class="qent" id="qentZ" onkeyup="inputChange(2, event.target.value)"/>
+            <input type="number" class="qent" id="qentW" onkeyup="inputChange(3, event.target.value)"/>
         </div>
 
         <div id="pad">
 
             <div id="row1">
 
-                <button class="action times">
+                <button class="action times" onclick="multiply()">
                     <span>=</span>
                 </button>
 
-                <button class="action inverse">
+                <button class="action inverse" onclick="invert()">
                     <span>inv</span>
                 </button>
 
-                <button class="action backspace">
+                <button class="action backspace" onclick="backspace()">
                     <span class="material-icons">backspace</span>
                 </button>
 
-                <button class="action memclear">
+                <button class="action memclear" onclick="clearMem()">
                     <span>MC</span>
                 </button>
 
             </div>
 
             <div id="numLeft">
-                <button class="num">1</button>
-                <button class="num">&Sqrt;2/2</button>
-                <button class="num">1/2</button>
-                <button class="num">-1</button>
-                <button class="num">-&Sqrt;2/2</button>
-                <button class="num">-1/2</button>
+                <button class="num" onclick="clickNum(1)">1</button>
+                <button class="num" onclick="clickNum(s)">&Sqrt;2/2</button>
+                <button class="num" onclick="clickNum(h)">1/2</button>
+                <button class="num" onclick="clickNum(-1)">-1</button>
+                <button class="num" onclick="clickNum(-s)">-&Sqrt;2/2</button>
+                <button class="num" onclick="clickNum(-h)">-1/2</button>
             </div>
 
             <div id="numRight">
-                <button class="zero">0</button>
+                <button class="zero" onclick="clickNum(0)">0</button>
             </div>
 
             <div id="help" onclick="window.location.href = 'https://github.com/jpiland16/qcalc'">help/about</div>
