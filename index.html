@@ -1,21 +1,39 @@
 <html>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <head>
         <title>
             Quaternion Calculator
         </title>
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="index.css" />
+        <link rel="manifest" href="/manifest.json">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
     <body>
 
-        <div id="entry">
-
+        <div id="res">
+            <div class="qdesc">mem</div>
+            <div class="qres" id="qresX">0</div>
+            <div class="qres" id="qresY">0</div>
+            <div class="qres" id="qresZ">0</div>
+            <div class="qres" id="qresW">1</div>
+        </div>
+                
+        <div id="label">
+            <div class="qdesc"></div>
+            <div class="qlabel">X</div>
+            <div class="qlabel">Y</div>
+            <div class="qlabel">Z</div>
+            <div class="qlabel">W</div>
         </div>
 
-        <div id="res">
-
+        <div id="entry">
+            <div class="qdesc">times</div>
+            <input type="number" class="qent" id="qentX" />
+            <input type="number" class="qent" id="qentY" />
+            <input type="number" class="qent" id="qentZ" />
+            <input type="number" class="qent" id="qentW" />
         </div>
 
         <div id="pad">
@@ -23,11 +41,19 @@
             <div id="row1">
 
                 <button class="action times">
-                    <span><i>* Q</i></span>
+                    <span>=</span>
+                </button>
+
+                <button class="action inverse">
+                    <span>inv</span>
                 </button>
 
                 <button class="action backspace">
                     <span class="material-icons">backspace</span>
+                </button>
+
+                <button class="action memclear">
+                    <span>MC</span>
                 </button>
 
             </div>
@@ -44,6 +70,8 @@
             <div id="numRight">
                 <button class="zero">0</button>
             </div>
+
+            <div id="help" onclick="window.location.href = 'https://github.com/jpiland16/qcalc'">help/about</div>
 
         </div>
 
