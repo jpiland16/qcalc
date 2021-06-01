@@ -15,7 +15,15 @@ button {
     background-color: #2c2c2c;
     margin: var(--button-margin);
     border-radius: 5px;
+    border-width: 5px;
     font-size: 7vw;
+    opacity: 1;
+    transition: opacity 0.1s;
+}
+
+button:active {
+    opacity: 0.7;
+    transition: opacity 0.1s;
 }
 
 span {
