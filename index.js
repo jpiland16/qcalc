@@ -56,6 +56,9 @@ function multiplyQuaternions() {
             + qMem[2] * qEnt[3] // z * w
               + qMem[3] * qEnt[2], // w * z
         qMem[3] * qEnt[3] // w * w
+          - qMem[0] * qEnt[0] // x * x
+            - qMem[1] * qEnt[1] // y * y
+              - qMem[2] * qEnt[2] // z * z  
     ];
     qMem = newQ;
 }
