@@ -39,9 +39,18 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-#entry {
+#cursor {
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    top: calc(40vh - 3vw);
+    left: 5.5vw;
+    background-color: white;
+}
+
+#res {
     width: 100%;
-    height: 24%;
+    height: 12%;
 }
 
 #label {
@@ -49,9 +58,9 @@ input[type=number] {
     height: 4%;
 }
 
-#res {
+#entry {
     width: 100%;
-    height: 12%;
+    height: 24%;
 }
 
 #pad {

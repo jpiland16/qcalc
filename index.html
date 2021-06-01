@@ -31,10 +31,11 @@
 
         <div id="entry">
             <div class="qdesc">times</div>
-            <input type="number" class="qent" id="qentX" onkeyup="inputChange(0, event)"/>
-            <input type="number" class="qent" id="qentY" onkeyup="inputChange(1, event)"/>
-            <input type="number" class="qent" id="qentZ" onkeyup="inputChange(2, event)"/>
-            <input type="number" class="qent" id="qentW" onkeyup="inputChange(3, event)"/>
+            <div id="cursor"></div>
+            <input type="number" class="qent" id="qentX" onkeyup="inputChange(0, event)" onclick="clickEntry(0)"/>
+            <input type="number" class="qent" id="qentY" onkeyup="inputChange(1, event)" onclick="clickEntry(1)"/>
+            <input type="number" class="qent" id="qentZ" onkeyup="inputChange(2, event)" onclick="clickEntry(2)"/>
+            <input type="number" class="qent" id="qentW" onkeyup="inputChange(3, event)" onclick="clickEntry(3)"/>
         </div>
 
         <div id="pad">

@@ -26,6 +26,7 @@ function clickNum(num) {
     qEnt[qIndex] = num;
     qIndex++;
     qIndex %= 4;
+    updateCursorPos();
 }
 
 function clearInputs() {
@@ -69,11 +70,13 @@ function invert() {
 }
 
 function backspace() {
+    if (qIndex === 0 && document.getElementById(inputElementNames[3]).value == "") return;
     qIndex--;
     qIndex += 4;
     qIndex %= 4;
     document.getElementById(inputElementNames[qIndex]).value = "";
     qEnt[qIndex] = undefined;
+    updateCursorPos();
 }
 
 function clearMem() {
@@ -94,6 +97,7 @@ function inputChange(inputId, event) {
         }
         qIndex %= 4;
     }
+    updateCursorPos();
 }
 
 function multiply() {
@@ -102,4 +106,14 @@ function multiply() {
     }
     multiplyQuaternions();
     updateOutput();
+}
+
+function updateCursorPos() {
+    let left = 5.5 + 24 * qIndex;
+    document.getElementById("cursor").style.left = `${left}vw`;
+}
+
+function clickEntry(i) {
+    qIndex = i;
+    updateCursorPos();
 }
