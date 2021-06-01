@@ -78,9 +78,19 @@ function clearMem() {
     updateOutput();
 }
 
-function inputChange(inputId, value) {
+function inputChange(inputId, event) {
+    let value = event.target.value;
     qIndex = inputId;
     qEnt[qIndex] = Number(value);
+    if (event.keyCode === 13) { // ENTER
+        qIndex++;
+        if (qIndex < 4) {
+            document.getElementById(inputElementNames[qIndex]).focus();
+        } else {
+            event.target.blur();
+        }
+        qIndex %= 4;
+    }
 }
 
 function multiply() {
