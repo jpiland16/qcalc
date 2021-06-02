@@ -18,7 +18,8 @@ button {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 5px;
     border-width: 5px;
-    font-size: 7vw;
+    font-size: min(7vh, 7vw);
+    font-weight: bold;
 }
 
 button:active {
@@ -26,7 +27,7 @@ button:active {
 }
 
 span {
-    font-size: 7vw !important;
+    font-size: min(7vh, 7vw) !important;
 }
 
 input::-webkit-outer-spin-button,
@@ -157,6 +158,12 @@ input[type=number] {
     text-align: center;
     float: left;
 }
+
+.qent:active, .qent:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+  }
 
 .action {
     width: calc(25% - 2 * var(--button-margin));
