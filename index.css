@@ -18,8 +18,10 @@ button {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 5px;
     border-width: 5px;
-    font-size: min(7vh, 7vw);
+    font-size: min(5.5vh, 5.5vw);
     font-weight: bold;
+    touch-action: manipulation;
+    padding: 0px;
 }
 
 button:active {
@@ -38,6 +40,7 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 #cursor {
@@ -104,7 +107,7 @@ input[type=number] {
 .qdesc {
     float: left;
     font-family: 'Courier New', Courier, monospace;
-    width: calc(4% - 1px);
+    width: 4%;
     height: 100%;
     font-weight: bold;
     writing-mode: vertical-lr; 
@@ -113,7 +116,6 @@ input[type=number] {
     align-items: center;
     justify-content: center;
     background-color: #242b31;
-    border-left: 1px solid white;
 }
 
 .qres {
